@@ -198,7 +198,7 @@ namespace KerbalEngineer.VesselSimulator
             for (int i = 0; i < propellants.Count; ++i)
             {
                 Propellant propellant = propellants[i];
-                if (propellant.name == "ElectricCharge" || propellant.name == "IntakeAir" || DeltaVGlobals.PropellantsToIgnore.Contains(propellant.name))
+                if (propellant.name == "ElectricCharge" || propellant.name == "IntakeAir" || DeltaVGlobals.PropellantsToIgnore.Contains(propellant.name.GetHashCode()))
                 {
                     continue;
                 }
@@ -211,7 +211,7 @@ namespace KerbalEngineer.VesselSimulator
             {
                 Propellant propellant = propellants[i];
 
-                if (propellant.name == "ElectricCharge" || propellant.name == "IntakeAir" || DeltaVGlobals.PropellantsToIgnore.Contains(propellant.name))
+                if (propellant.name == "ElectricCharge" || propellant.name == "IntakeAir" || DeltaVGlobals.PropellantsToIgnore.Contains(propellant.name.GetHashCode()))
                 {
                     continue;
                 }
